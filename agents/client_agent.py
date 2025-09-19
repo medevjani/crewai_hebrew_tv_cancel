@@ -1,6 +1,9 @@
-class ClientAgent:
-    def __init__(self):
-        self.request = "שלום, אני רוצה לבטל את המנוי לטלוויזיה שלי."
+from crewai import Agent
 
-    def speak(self) -> str:
-        return self.request
+client_agent = Agent(
+    role="Client",
+    goal="Cancel their television subscription",
+    backstory="Wants to stop paying for TV and get confirmation of cancellation.",
+    tools=[],   # 👈 no tools, just fixed dialogue
+    verbose=True
+)

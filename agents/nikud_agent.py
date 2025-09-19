@@ -1,16 +1,10 @@
-import os
-from phonikud_onnx import Phonikud
-from dotenv import load_dotenv
+from crewai import Agent
+from tools.nikud_tool import add_nikud_tool
 
-load_dotenv()
-
-class NikudAgent:
-    def __init__(self):
-        model_path = os.getenv("NIKUD_MODEL_PATH")
-        tokenizer_path = os.getenv("NIKUD_TOKENIZER_PATH")
-        #self.model = Phonikud(model_path, tokenizer_path)
-        self.model = Phonikud(model_path)
-
-    def add_nikud(self, text: str) -> str:
-        """Add Nikud (Hebrew diacritics) to text."""
-        return self.model.add_diacritics(text)
+nikud_agent = Agent(
+    role="Nikud Specialist",
+    goal="Add Hebrew Nikud to improve pronunciation",
+    backstory="Expert in Hebrew diacritics and phonetic enhancement.",
+    tools=[add_nikud_tool],   # 👈 assigned here
+    verbose=True
+)

@@ -1,0 +1,15 @@
+ffmpeg-python
+spicy
+crewai
+#litellm==1.68.0
+#chatterbox-tts
+phonikud @ git+https://github.com/thewh1teagle/phonikud.git
+phonikud-onnx
+#onnxruntime==1.21.1
+onnxruntime
+python-dotenv
+torchaudio
+openai-whisper
+numpy==1.24.0
+scipy
+

@@ -12,7 +12,7 @@ This project simulates a **customer support call in Hebrew** for cancelling a TV
 - **Client Agent**: asks to cancel TV subscription
 - **CSR Agent**: polite response in Hebrew (via LiteLLM)
 - **Nikud Agent**: adds diacritics with [Phonikud](https://github.com/thewh1teagle/phonikud)
-- **TTS Agent**: converts Hebrew text to speech using [Chatterbox-TTS](https://github.com/resemble-ai/chatterbox) . Since multilingual support was not working properly in CPU mode, chatterbox code is locally downloaded, updated ad used as part of the solution
+- **TTS Agent**: converts Hebrew text to speech using [Chatterbox-TTS](https://github.com/resemble-ai/chatterbox) . Since multilingual support was not working properly in CPU mode, chatterbox code is locally downloaded, updated and used as part of the solution
 - **STT Agent**: transcribes audio (stub/mock, replace with Whisper if needed)
 - **Transcript Agent**: logs conversation to JSON
 - **Guardrails**: filters unsafe responses

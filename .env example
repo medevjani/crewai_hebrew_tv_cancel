@@ -1,0 +1,19 @@
+# LiteLLM
+LITELLM_MODEL=openai/gpt-4o-mini
+LITELLM_API_KEY=<open ai api key, can be a free tier one>
+OPENAI_API_KEY=<open ai api key, can mot be a free tier one since it is used for whisper>
+
+
+# Chatterbox TTS
+CHATTERBOX_MODEL=chatterbox-tts:latest
+CHATTERBOX_DEVICE=cpu
+
+# Phonikud model (Hebrew Nikud)
+NIKUD_MODEL_PATH=./models/phonikud-1.0.int8.onnx
+#NIKUD_TOKENIZER_PATH=./models/tokenizer.json
+
+# Whisper STT
+WHISPER_MODEL_SIZE=base   # options: tiny, base, small, medium, large
+
+# Output
+OUTPUT_DIR=./outputs

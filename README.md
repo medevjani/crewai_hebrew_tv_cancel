@@ -2,11 +2,17 @@
 
 This project simulates a **customer support call in Hebrew** for cancelling a TV subscription, using CrewAI-style modular agents.
 
+# Prerequisites
+- ffmpeg tool to be installed in local and exe path to be added in the path variable
+- phonikud-1.0.int8.onnx model file is not part of the package since it is very large in size. The same has to be downloaded and added inside models folder
+- virtual environment to be created on python version=3.11
+- open ai api keys, to be configured in .env file
+
 ## Features
 - **Client Agent**: asks to cancel TV subscription
 - **CSR Agent**: polite response in Hebrew (via LiteLLM)
 - **Nikud Agent**: adds diacritics with [Phonikud](https://github.com/thewh1teagle/phonikud)
-- **TTS Agent**: converts Hebrew text to speech using [Chatterbox-TTS](https://github.com/resemble-ai/chatterbox)
+- **TTS Agent**: converts Hebrew text to speech using [Chatterbox-TTS](https://github.com/resemble-ai/chatterbox) . Since multilingual support was not working properly in CPU mode, chatterbox code is locally downloaded, updated ad used as part of the solution
 - **STT Agent**: transcribes audio (stub/mock, replace with Whisper if needed)
 - **Transcript Agent**: logs conversation to JSON
 - **Guardrails**: filters unsafe responses
@@ -29,14 +35,7 @@ WHISPER_MODEL_SIZE=small
 git clone <repo>
 cd crewai_hebrew_tv_cancel
 cp .env.example .env   # edit with your API keys
-#python -m venv venv
-# Replace the path with the actual path to python3.10.exe if needed
-py -3.11 -m venv .venv
-# or, if py launcher is not available:
-#C:\Path\To\Python310\python.exe -m venv venv
-# python.exe -m pip install --force-reinstall numpy scipy 
-.\.venv\Scripts\activate
-#pip install numpy
 pip install -r requirements.txt
 cd chatterbox
 pip install -e .
+cd..

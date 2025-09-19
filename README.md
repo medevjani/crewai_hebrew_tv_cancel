@@ -3,8 +3,8 @@
 This project simulates a **customer support call in Hebrew** for cancelling a TV subscription, using CrewAI-style modular agents.
 
 # Prerequisites
-- ffmpeg tool to be installed in local and exe path to be added in the path variable
-- phonikud-1.0.int8.onnx model file is not part of the package since it is very large in size. The same has to be downloaded and added inside models folder
+- [ffmpeg](https://www.ffmpeg.org/download.html) tool to be installed in local and exe path to be added in the path variable
+- [phonikud-1.0.int8.onnx](https://huggingface.co/thewh1teagle/phonikud-onnx) model file is not part of the package since it is very large in size. The same has to be downloaded and added inside models folder
 - virtual environment to be created on python version=3.11
 - open ai api keys, to be configured in .env file
 

@@ -6,6 +6,6 @@ customer_service_agent = Agent(
     role="Customer Service Representative",
     goal="Help client cancel their TV subscription politely",
     backstory="Trained to manage cancellations and retention while staying polite.",
-    tools=[guardrails_tool, transcript_tool],   # 👈 CSR uses both
+    tools=[guardrails_tool],   # 👈 CSR uses both
     verbose=True
 )

@@ -40,7 +40,7 @@ def build_cancellation_tasks():
             expected_output="File path to generated CSR speech WAV file."
         ),
         Task(
-            description="Log the full conversation into a transcript file with timestamps.",
+            description="Log the full conversation into a transcript file with timestamps. It should include client request's raw hebrew text, nikud agent output for client request, the customer service agent's response in plain raw hebrew text and nikud agent's output for customer service agent's response",
             agent=transcript_agent,
             expected_output="Path to updated transcript.json containing all conversation turns."
         )
